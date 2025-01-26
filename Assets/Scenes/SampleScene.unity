@@ -2016,6 +2016,9 @@ GameObject:
   - component: {fileID: 1274891459}
   - component: {fileID: 1274891468}
   - component: {fileID: 1274891467}
+  - component: {fileID: 1274891471}
+  - component: {fileID: 1274891470}
+  - component: {fileID: 1274891469}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -2226,7 +2229,7 @@ MonoBehaviour:
   selectPosition: {x: 0, y: 0}
   ScrollPosition: {x: 0, y: 0}
   startHoldPoint: {x: 0, y: 0}
-  stateActionIndex: {x: 1, y: 1}
+  stateActionIndex: {x: 0, y: 2}
   state:
   - action:
     - node: {fileID: 1274891459}
@@ -2250,7 +2253,7 @@ MonoBehaviour:
     signal: 0
     changeState: 0
     deleteAsk: 0
-    foldOut: 1
+    foldOut: 0
     active: 0
     delete: 0
     add: 0
@@ -2278,7 +2281,72 @@ MonoBehaviour:
     signal: 1
     changeState: 0
     deleteAsk: 0
+    foldOut: 0
+    active: 0
+    delete: 0
+    add: 0
+    menu: 1
+    signalIndex: 0
+  - action:
+    - node: {fileID: 1274891470}
+      onSuccess: 
+      onFailure: 
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 1274891471}
+      onSuccess: 
+      onFailure: 
+      goToSuccess: 0
+      goToFailure: 0
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    - node: {fileID: 1274891469}
+      onSuccess: Death
+      onFailure: Death
+      goToSuccess: 1
+      goToFailure: 1
+      foldOut: 0
+      deleteAsk: 0
+      delete: 0
+      add: 0
+    stateName: Kill
+    defaultSignal: Animation Signal
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 0
+    childIndex: 0
+    type: 0
+    showStateExtra: 0
+    editName: 0
+    signal: 1
+    changeState: 0
+    deleteAsk: 0
     foldOut: 1
+    active: 0
+    delete: 0
+    add: 0
+    menu: 1
+    signalIndex: 1
+  - action: []
+    stateName: Death
+    defaultSignal: Animation Signal
+    cantInterrupt: 0
+    useSignal: 0
+    enabled: 0
+    childIndex: 0
+    type: 0
+    showStateExtra: 0
+    editName: 0
+    signal: 1
+    changeState: 0
+    deleteAsk: 0
+    foldOut: 0
     active: 0
     delete: 0
     add: 0
@@ -2423,6 +2491,22 @@ MonoBehaviour:
     spriteFlip:
     - nodes:
       - nodes: []
+        sprite: 
+        signal: Kill
+        add: 0
+        active: 0
+        delete: 0
+        foldOut: 1
+        signalIndex: 0
+      - nodes: []
+        sprite: 
+        signal: Death
+        add: 0
+        active: 0
+        delete: 0
+        foldOut: 0
+        signalIndex: 0
+      - nodes: []
         sprite: flipLeft
         signal: velXLeft
         add: 0
@@ -2446,6 +2530,14 @@ MonoBehaviour:
       foldOut: 1
       signalIndex: 0
     branch:
+    - nodes: []
+      sprite: Muerte
+      signal: pushBack
+      add: 0
+      active: 0
+      delete: 0
+      foldOut: 1
+      signalIndex: 0
     - nodes:
       - nodes: []
         sprite: idle
@@ -2479,13 +2571,16 @@ MonoBehaviour:
     - velXLeft
     - velXRight
     - velXZero
+    - pushBack
+    - Kill
+    - Death
     search: 
     active: 0
     createState: 0
-    stateFoldOut: 0
-    signalFoldOut: 0
+    stateFoldOut: 1
+    signalFoldOut: 1
     signalIndex: 0
-    scrollIndex: 73
+    scrollIndex: 75
     signalRef:
       all:
       - name: alwaysTrue
@@ -2603,7 +2698,7 @@ MonoBehaviour:
         use: 0
         canDelete: 0
       - name: pushBack
-        use: 0
+        use: 1
         canDelete: 0
       - name: pushBackLeft
         use: 0
@@ -2743,7 +2838,13 @@ MonoBehaviour:
       - name: zipline
         use: 0
         canDelete: 0
-      extra: []
+      extra:
+      - name: Kill
+        use: 1
+        canDelete: 1
+      - name: Death
+        use: 1
+        canDelete: 1
       foldOutVelocity: 0
       foldOutWall: 0
       foldOutWorld: 0
@@ -2757,8 +2858,8 @@ MonoBehaviour:
   sort: 0
   add: 0
   active: 0
-  foldOut: 0
-  open: 1
+  foldOut: 1
+  open: 0
   delete: 0
   deleteAsk: 0
   spriteMenu: 0
@@ -2786,7 +2887,7 @@ MonoBehaviour:
   propertyIndex: 0
   rendererSprite: {fileID: 0}
   settingRenderer: 0
-  spriteIndex: 0
+  spriteIndex: 3
   scrollIndex: 0
   sprites:
   - property: []
@@ -3008,6 +3109,39 @@ MonoBehaviour:
     addTransition: 0
     deleteTransition: 0
     canDelete: 0
+  - property: []
+    frame:
+    - onEnterFrame:
+        m_PersistentCalls:
+          m_Calls: []
+      sprite: {fileID: -6350690513746178399, guid: e74c69dffec441f43b730628b71caf52, type: 3}
+      rate: 0.1
+      add: 0
+      delete: 0
+      eventFoldOut: 0
+    onLoopOnce:
+      m_PersistentCalls:
+        m_Calls: []
+    loopStartIndex: 0
+    loopOnce: 0
+    name: Muerte
+    canSync: 0
+    syncID: 0
+    lastFrame: 0
+    rememberLastFrame: 0
+    randomAnimations: []
+    isRandom: 0
+    transition: []
+    hasTransition: 0
+    hasChangedDirection: 0
+    active: 0
+    frameIndex: 0
+    signalIndex: 0
+    globalRate: 7.25
+    transitionFoldOut: 0
+    addTransition: 0
+    deleteTransition: 0
+    canDelete: 0
   spriteSwap: {fileID: 0}
   references:
     version: 2
@@ -3176,16 +3310,28 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1274891467}
-        m_TargetAssemblyTypeName: TwoBitMachines.FlareEngine.AI.PushBack, Assembly-CSharp
-        m_MethodName: ActivatePushBack
-        m_Mode: 0
+      - m_Target: {fileID: 1274891461}
+        m_TargetAssemblyTypeName: TwoBitMachines.FlareEngine.AIFSM, Assembly-CSharp
+        m_MethodName: ChangeState
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Kill
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1274891464}
+        m_TargetAssemblyTypeName: TwoBitMachines.TwoBitSprite.SpriteEngine, Assembly-CSharp
+        m_MethodName: SetNewAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Death
           m_BoolArgument: 0
         m_CallState: 2
   onMinValue:
@@ -3240,6 +3386,180 @@ MonoBehaviour:
   onImpact:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1274891469
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274891458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f42f2b3ac1526247a5f30a629ad1f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: OnEvent
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 1
+  canHaveChildren: 1
+  refName: []
+  message: []
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1274891458}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1274891470
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274891458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e53b5f8566b5040979377f7b4e592d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: EnableBehaviour
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 0
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  behaviourRef: {fileID: 1274891463}
+  renderRef: {fileID: 0}
+  enable: 0
+--- !u!114 &1274891471
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274891458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d84b4b0e2acb34596f0dd2b39c1225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeSetup: 0
+  nodeState: 0
+  nodeType: 1
+  nodeParent: {fileID: 0}
+  completed: 0
+  nameType: Clock
+  fsmChild: 
+  fsmIndex: 0
+  selectCounter: 10
+  failedCounter: 10
+  interruptCounter: 10
+  rectSize: {x: 0, y: 0}
+  rectPosition: {x: 0, y: 0}
+  add: 0
+  active: 0
+  delete: 0
+  deleteAsk: 1
+  showInfo: 0
+  failed: 0
+  foldOut: 1
+  inspect: 0
+  comments: 0
+  isDragged: 0
+  wasDragged: 0
+  rectActive: 0
+  copySelected: 0
+  hideChildren: 0
+  interruptCheck: 0
+  inspectSelected: 0
+  lookingForChild: 0
+  childActive: 0
+  openNext: 0
+  canHaveChildren: 1
+  refName: []
+  message: []
+  type: 0
+  wait: 2
+  min: 2
+  max: 5
+  dontReset: 0
+  waitAnimation: 
+  onBeginClock:
+    m_PersistentCalls:
+      m_Calls: []
+  onFinishClock:
+    m_PersistentCalls:
+      m_Calls: []
+  eventsFoldOut: 0
+  beginFoldOut: 0
+  finishFoldOut: 0
 --- !u!1 &1754902480
 GameObject:
   m_ObjectHideFlags: 0
@@ -3313,7 +3633,7 @@ MonoBehaviour:
   message: []
   target: {fileID: 1754902482}
   axis: 1
-  speed: 6
+  speed: 0
   findDistance: 0
   hasGravity: 0
   pauseTimer: 0
