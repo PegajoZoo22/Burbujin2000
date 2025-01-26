@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e6a57fad055e1b84880e6a0b450bce4e
+guid: c9e66eb4006d303429c00a10abd6b3db
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BbIdle512_0
+      name: BbJump512_0
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 96
-        width: 224
-        height: 320
+        width: 256
+        height: 352
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb04dab390ece9941b20e2cd46a914d0
-      internalID: -2146098841
+      spriteID: 5e670257e8835814aac7590d6d25141e
+      internalID: 821964131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BbIdle512_1
+      name: BbJump512_1
       rect:
         serializedVersion: 2
-        x: 288
+        x: 320
         y: 96
-        width: 224
-        height: 320
+        width: 256
+        height: 352
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ac14e84448451644a86533f313c006a
-      internalID: -1186365213
+      spriteID: f548d6315b9d7db43b1f0b99b80429d0
+      internalID: -1785345166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BbIdle512_2
+      name: BbJump512_2
       rect:
         serializedVersion: 2
-        x: 528
+        x: 592
         y: 96
-        width: 224
-        height: 320
+        width: 256
+        height: 352
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +169,42 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b14d7fc06b43434faea3896dad1b3cc
-      internalID: 1341331187
+      spriteID: 4085195109789ec4c8654b095c512c13
+      internalID: -1566070211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BbIdle512_3
+      name: BbJump512_3
       rect:
         serializedVersion: 2
-        x: 768
+        x: 864
+        y: 96
+        width: 256
+        height: 352
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc481407d29d28c4a9b525e0767a510b
+      internalID: -1699675641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BbJump512_4
+      rect:
+        serializedVersion: 2
+        x: 1136
         y: 97
-        width: 224
-        height: 319
+        width: 272
+        height: 351
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,8 +213,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: faec9372d4310404ebcdc919dd968e12
-      internalID: -1383946987
+      spriteID: fbd1f6c0017325149a056383153f09a7
+      internalID: -1561700793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BbJump512_5
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 98
+        width: 272
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718ee45a1743b304cb1fd5a43eebe632
+      internalID: -849121483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BbJump512_6
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 100
+        width: 272
+        height: 347
+      alignment: 9
+      pivot: {x: 0.49999955, y: 0.001827626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32fdfb430f953834b903470124aa1fb5
+      internalID: 1102377298
       vertices: []
       indices: 
       edges: []
@@ -201,7 +267,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c8f489b16a838de42927377bedeed9ea
+    spriteID: e2ecb94d9580d834cb6a5c4e7da1d0eb
     internalID: 0
     vertices: []
     indices: 
@@ -211,11 +277,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BbIdle512_0: -2146098841
-      BbIdle512_1: -1186365213
-      BbIdle512_2: 1341331187
-      BbIdle512_3: -1383946987
-      BbIdle512_4: 2112421008
+      BbJump512_0: 821964131
+      BbJump512_1: -1785345166
+      BbJump512_2: -1566070211
+      BbJump512_3: -1699675641
+      BbJump512_4: -1561700793
+      BbJump512_5: -849121483
+      BbJump512_6: 1102377298
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
