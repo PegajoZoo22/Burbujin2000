@@ -1385,7 +1385,7 @@ MonoBehaviour:
   playInScene: 0
   resetPlayFrame: 0
   frameCounter: 7
-  frameTimer: -18.32523
+  frameTimer: -12.266474
   zoom: 0.25
   propertyFoldOut: 0
   resetSprites: 0
@@ -24560,7 +24560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9106d07ed27f96247a04c5e2cb49fa82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTransform: {fileID: 0}
+  targetTransform: {fileID: 822137952}
   cameraRef: {fileID: 536243337610341713}
   zoom:
     type: 0
