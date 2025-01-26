@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 8014568}
   - component: {fileID: 8014569}
   - component: {fileID: 8014570}
+  - component: {fileID: 8014571}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -246,10 +247,10 @@ MonoBehaviour:
     search: 
     active: 0
     createState: 0
-    stateFoldOut: 1
-    signalFoldOut: 1
+    stateFoldOut: 0
+    signalFoldOut: 0
     signalIndex: 0
-    scrollIndex: 40
+    scrollIndex: 45
     signalRef:
       all:
       - name: airGlide
@@ -521,8 +522,8 @@ MonoBehaviour:
   sort: 0
   add: 0
   active: 0
-  foldOut: 0
-  open: 1
+  foldOut: 1
+  open: 0
   delete: 0
   deleteAsk: 0
   spriteMenu: 0
@@ -542,15 +543,15 @@ MonoBehaviour:
   playInInspector: 1
   playInScene: 0
   resetPlayFrame: 0
-  frameCounter: 4
-  frameTimer: 0
+  frameCounter: 3
+  frameTimer: -37.303856
   zoom: 0.25
   propertyFoldOut: 0
   resetSprites: 0
   propertyIndex: 0
   rendererSprite: {fileID: 0}
   settingRenderer: 0
-  spriteIndex: 1
+  spriteIndex: 0
   scrollIndex: 0
   sprites:
   - property: []
@@ -558,32 +559,32 @@ MonoBehaviour:
     - onEnterFrame:
         m_PersistentCalls:
           m_Calls: []
-      sprite: {fileID: 21300000, guid: 83b1b38f06038154eb74b215eba6ab49, type: 3}
-      rate: 0.16
+      sprite: {fileID: 1418558403, guid: a8fba5cc0cc55dd4f92a2cf2c8a08c3d, type: 3}
+      rate: 0.14814815
       add: 0
       delete: 0
       eventFoldOut: 0
     - onEnterFrame:
         m_PersistentCalls:
           m_Calls: []
-      sprite: {fileID: 21300002, guid: 83b1b38f06038154eb74b215eba6ab49, type: 3}
-      rate: 0.16
+      sprite: {fileID: 530767431, guid: a8fba5cc0cc55dd4f92a2cf2c8a08c3d, type: 3}
+      rate: 0.14814815
       add: 0
       delete: 0
       eventFoldOut: 0
     - onEnterFrame:
         m_PersistentCalls:
           m_Calls: []
-      sprite: {fileID: 21300004, guid: 83b1b38f06038154eb74b215eba6ab49, type: 3}
-      rate: 0.16
+      sprite: {fileID: 1067538616, guid: a8fba5cc0cc55dd4f92a2cf2c8a08c3d, type: 3}
+      rate: 0.14814815
       add: 0
       delete: 0
       eventFoldOut: 0
     - onEnterFrame:
         m_PersistentCalls:
           m_Calls: []
-      sprite: {fileID: 21300006, guid: 83b1b38f06038154eb74b215eba6ab49, type: 3}
-      rate: 0.16
+      sprite: {fileID: 8599697, guid: a8fba5cc0cc55dd4f92a2cf2c8a08c3d, type: 3}
+      rate: 0.14814815
       add: 0
       delete: 0
       eventFoldOut: 0
@@ -603,9 +604,9 @@ MonoBehaviour:
     hasTransition: 0
     hasChangedDirection: 0
     active: 0
-    frameIndex: 1
+    frameIndex: 3
     signalIndex: 0
-    globalRate: 6.25
+    globalRate: 6.75
     transitionFoldOut: 0
     addTransition: 0
     deleteTransition: 0
@@ -1150,6 +1151,18 @@ MonoBehaviour:
   enterFoldOut: 0
   exitFoldOut: 0
   entryFoldOut: 0
+--- !u!114 &8014571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8014561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f7adeb93c07aa45b1e15132af353e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &358258651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,7 +1492,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 0.96
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1582,7 +1595,7 @@ MonoBehaviour:
       foldOut: 0
       view: 1
     deadZone:
-      size: {x: 6, y: 6}
+      size: {x: 1, y: 1}
     pushZone:
       zoneX: 0
       zoneY: 0
