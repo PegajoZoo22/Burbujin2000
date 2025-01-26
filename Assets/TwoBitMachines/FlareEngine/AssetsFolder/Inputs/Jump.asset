@@ -17,8 +17,9 @@ MonoBehaviour:
   mouse: 3
   key: 32
   axisName: Jump
-  bindings: []
+  bindings:
+  - {fileID: 11400000, guid: 2ed2e3f095d88bc44862868f96fcf5e0, type: 2}
   axisToRead: 0
   maxThreshold: 99
   minThreshold: -99
-  foldOut: 0
+  foldOut: 1
