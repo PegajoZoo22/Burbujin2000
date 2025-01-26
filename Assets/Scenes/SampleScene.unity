@@ -539,20 +539,20 @@ MonoBehaviour:
   tabIndex: -1
   previewArea: 1
   scrollPosition: {x: 0, y: 0}
-  offsetPosition: {x: 89.25, y: 89.25}
+  offsetPosition: {x: 89.06823, y: 89.249985}
   color: {r: 1, g: 1, b: 1, a: 1}
   playInInspector: 1
   playInScene: 0
   resetPlayFrame: 0
-  frameCounter: 1
-  frameTimer: -30.124344
+  frameCounter: 7
+  frameTimer: 0.016181946
   zoom: 0.25
   propertyFoldOut: 0
   resetSprites: 0
   propertyIndex: 0
   rendererSprite: {fileID: 0}
   settingRenderer: 0
-  spriteIndex: 2
+  spriteIndex: 1
   scrollIndex: 0
   sprites:
   - property: []
@@ -657,6 +657,14 @@ MonoBehaviour:
     - onEnterFrame:
         m_PersistentCalls:
           m_Calls: []
+      sprite: {fileID: -849121483, guid: c9e66eb4006d303429c00a10abd6b3db, type: 3}
+      rate: 0.17391305
+      add: 0
+      delete: 0
+      eventFoldOut: 0
+    - onEnterFrame:
+        m_PersistentCalls:
+          m_Calls: []
       sprite: {fileID: -1566070211, guid: c9e66eb4006d303429c00a10abd6b3db, type: 3}
       rate: 0.17391305
       add: 0
@@ -702,7 +710,7 @@ MonoBehaviour:
     hasTransition: 0
     hasChangedDirection: 0
     active: 0
-    frameIndex: 0
+    frameIndex: 3
     signalIndex: 0
     globalRate: 5.75
     transitionFoldOut: 0
@@ -714,7 +722,7 @@ MonoBehaviour:
     - onEnterFrame:
         m_PersistentCalls:
           m_Calls: []
-      sprite: {fileID: 21300000, guid: 69a98c446b983c54fbefa3d1064513d4, type: 3}
+      sprite: {fileID: 467124260, guid: 5a4b290b41a8a9049b2f05bd90265edc, type: 3}
       rate: 0.1
       add: 0
       delete: 0
@@ -722,7 +730,7 @@ MonoBehaviour:
     - onEnterFrame:
         m_PersistentCalls:
           m_Calls: []
-      sprite: {fileID: 21300002, guid: 69a98c446b983c54fbefa3d1064513d4, type: 3}
+      sprite: {fileID: -644706024, guid: 5a4b290b41a8a9049b2f05bd90265edc, type: 3}
       rate: 0.1
       add: 0
       delete: 0
@@ -730,7 +738,7 @@ MonoBehaviour:
     - onEnterFrame:
         m_PersistentCalls:
           m_Calls: []
-      sprite: {fileID: 21300004, guid: 69a98c446b983c54fbefa3d1064513d4, type: 3}
+      sprite: {fileID: -1637449250, guid: 5a4b290b41a8a9049b2f05bd90265edc, type: 3}
       rate: 0.1
       add: 0
       delete: 0
@@ -738,7 +746,7 @@ MonoBehaviour:
     - onEnterFrame:
         m_PersistentCalls:
           m_Calls: []
-      sprite: {fileID: 21300006, guid: 69a98c446b983c54fbefa3d1064513d4, type: 3}
+      sprite: {fileID: 1484772141, guid: 5a4b290b41a8a9049b2f05bd90265edc, type: 3}
       rate: 0.1
       add: 0
       delete: 0
@@ -746,7 +754,7 @@ MonoBehaviour:
     - onEnterFrame:
         m_PersistentCalls:
           m_Calls: []
-      sprite: {fileID: 21300008, guid: 69a98c446b983c54fbefa3d1064513d4, type: 3}
+      sprite: {fileID: -644706024, guid: 5a4b290b41a8a9049b2f05bd90265edc, type: 3}
       rate: 0.1
       add: 0
       delete: 0
@@ -754,7 +762,7 @@ MonoBehaviour:
     - onEnterFrame:
         m_PersistentCalls:
           m_Calls: []
-      sprite: {fileID: 21300010, guid: 69a98c446b983c54fbefa3d1064513d4, type: 3}
+      sprite: {fileID: -1132989930, guid: 5a4b290b41a8a9049b2f05bd90265edc, type: 3}
       rate: 0.1
       add: 0
       delete: 0
@@ -762,7 +770,15 @@ MonoBehaviour:
     - onEnterFrame:
         m_PersistentCalls:
           m_Calls: []
-      sprite: {fileID: 21300012, guid: 69a98c446b983c54fbefa3d1064513d4, type: 3}
+      sprite: {fileID: -1366912177, guid: 5a4b290b41a8a9049b2f05bd90265edc, type: 3}
+      rate: 0.1
+      add: 0
+      delete: 0
+      eventFoldOut: 0
+    - onEnterFrame:
+        m_PersistentCalls:
+          m_Calls: []
+      sprite: {fileID: -644706024, guid: 5a4b290b41a8a9049b2f05bd90265edc, type: 3}
       rate: 0.1
       add: 0
       delete: 0
@@ -786,7 +802,7 @@ MonoBehaviour:
     hasTransition: 0
     hasChangedDirection: 0
     active: 0
-    frameIndex: 4
+    frameIndex: 0
     signalIndex: 0
     globalRate: 6.25
     transitionFoldOut: 1
@@ -1962,6 +1978,8 @@ GameObject:
   - component: {fileID: 1274891467}
   - component: {fileID: 1274891468}
   - component: {fileID: 1274891469}
+  - component: {fileID: 1274891470}
+  - component: {fileID: 1274891471}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -3025,6 +3043,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1274891469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274891458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a498f43ef9a79524b94a87ec85011569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1274891470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274891458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a498f43ef9a79524b94a87ec85011569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1274891471
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
