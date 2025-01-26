@@ -545,8 +545,8 @@ MonoBehaviour:
   playInInspector: 1
   playInScene: 0
   resetPlayFrame: 0
-  frameCounter: 6
-  frameTimer: 0.07397461
+  frameCounter: 7
+  frameTimer: 0
   zoom: 0.25
   propertyFoldOut: 0
   resetSprites: 0
