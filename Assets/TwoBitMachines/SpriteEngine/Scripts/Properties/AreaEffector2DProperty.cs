@@ -41,8 +41,8 @@ namespace TwoBitMachines.TwoBitSprite
                 private void Set (Data d)
                 {
                         if (property == null) return;
-                        if (useAngularDrag) property.angularDrag = d.angularDrag;
-                        if (useDrag) property.drag = d.drag;
+                        if (useAngularDrag) property.angularDamping = d.angularDrag;
+                        if (useDrag) property.linearDamping = d.drag;
                         if (useForceAngle) property.forceAngle = d.forceAngle;
                         if (useForceMagnitude) property.forceMagnitude = d.forceMagnitude;
                         if (useForceVariation) property.forceVariation = d.forceVariation;
@@ -54,8 +54,8 @@ namespace TwoBitMachines.TwoBitSprite
                 public void SaveOriginalState ( )
                 {
                         if (property == null) return;
-                        original.angularDrag = property.angularDrag;
-                        original.drag = property.drag;
+                        original.angularDrag = property.angularDamping;
+                        original.drag = property.linearDamping;
                         original.forceAngle = property.forceAngle;
                         original.forceMagnitude = property.forceMagnitude;
                         original.forceVariation = property.forceVariation;
@@ -73,9 +73,9 @@ namespace TwoBitMachines.TwoBitSprite
                         Data data2 = data[frameIndex + 1 >= data.Count ? 0 : frameIndex + 1];
 
                         if (useAngularDrag && interpolateAngularDrag)
-                                property.angularDrag = Mathf.Lerp (data1.angularDrag, data2.angularDrag, timer / duration);
+                                property.angularDamping = Mathf.Lerp (data1.angularDrag, data2.angularDrag, timer / duration);
                         if (useDrag && interpolateDrag)
-                                property.drag = Mathf.Lerp (data1.drag, data2.drag, timer / duration);
+                                property.linearDamping = Mathf.Lerp (data1.drag, data2.drag, timer / duration);
                         if (useForceAngle && interpolateForceAngle)
                                 property.forceAngle = Mathf.Lerp (data1.forceAngle, data2.forceAngle, timer / duration);
                         if (useForceMagnitude && interpolateForceMagnitude)
